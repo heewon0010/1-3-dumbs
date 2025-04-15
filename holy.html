@@ -1,0 +1,67 @@
+<!-- <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 예제</title>
+</head>
+<body>
+    <h1 id="popp">click da popcat!11111</h1>
+
+    
+    <button onclick="pop()" >버튼 수 세기 어케하지이거</button>
+
+    
+    <img id="popcat" src = "mouth_close.png">
+
+    <script>
+        let a = 0;
+        
+        function pop() {
+            a += 1;
+            document.getElementById("popp").innerText = a;
+        }
+
+    </script>
+</body>
+</html>
+ -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>팝캣!</title>
+</head>
+<body>
+
+
+    <h1 id="count">0</h1>
+    <img id="popcat" src="mouth_close.png" width="300" alt="팝캣">
+    <br>
+    <button onclick="pop()">팝고양이</button>
+
+
+    <script>
+        let count = 0;
+        const popcatImg = document.getElementById("popcat");
+        const countText = document.getElementById("count");
+
+        function pop() {
+            count++;
+            countText.innerText = count;
+
+            popcatImg.src = "mouth_open.png";
+
+            setTimeout(() => {
+                popcatImg.src = "mouth_close.png";
+            }, 200);
+        }
+    </script>
+</body>
+</html>
+
+
